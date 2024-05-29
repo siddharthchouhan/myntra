@@ -1,0 +1,164 @@
+* {
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+nav ul li {
+  border-bottom: 4px solid white;
+}
+nav ul li:hover {
+  border-bottom: 4px solid #ee5f73;
+}
+
+#menCard::before {
+  content: "View Product Details";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.571);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding-top: 60%;
+  color: rgb(221, 221, 221);
+  font-weight: bold;
+  text-decoration: underline;
+  justify-content: center;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+#menCard:hover::before {
+  opacity: 100%;
+}
+
+.payActive {
+  background-color: white !important;
+  border-left: 6px solid #ee5f73;
+  border-right: none !important;
+}
+
+.payActive span {
+  color: #ee5f73 !important;
+}
+
+.cardInp input:focus {
+  border: 1px solid gray !important;
+}
+
+@media only screen and (max-width: 1398px) {
+  #navbar {
+    padding: 1% 0% !important;
+    position: static !important;
+  }
+  #navUl li {
+    line-height: normal !important;
+    padding: 0 !important;
+  }
+  #navbar form {
+    width: 100% !important;
+  }
+  #navbar form div {
+    margin: 30px 0px;
+    width: 100% !important;
+  }
+  #navRight {
+    margin-left: 6%;
+  }
+  #navMain {
+    margin-bottom: 0 !important;
+  }
+  nav ul li:hover{
+    border-bottom: 4px solid white !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #brand {
+    padding: 0px 0px !important;
+    margin: 0 !important;
+    margin-bottom: 10% !important;
+    margin-top: 10% !important;
+  }
+  #brand h1 {
+    padding: 0px 20px !important;
+  }
+  #category {
+    padding: 0px 0px !important;
+    margin: 0px 0px !important;
+  }
+  #category h1 {
+    padding: 0px 20px !important;
+  }
+  #singleProducts {
+    flex-wrap: wrap !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  #singleProducts img {
+    width: 60% !important;
+  }
+  #singlePages {
+    padding-left: 0px !important;
+  }
+  #singleProducts a {
+    width: 100% !important;
+  }
+  #singleCards {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+  }
+  #singleCardImage {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 994px) {
+  #bagOuter {
+    flex-wrap: wrap !important;
+  }
+  #bagRightInner {
+    width: 100% !important;
+  }
+  #bagRight {
+    border-left: none !important;
+    justify-content: end !important;
+    margin-top: 2%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #bagHeader {
+    justify-content: center !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #brandInner {
+    flex-wrap: wrap !important;
+    justify-content: space-evenly !important;
+  }
+  #brandInner img {
+    width: auto !important;
+  }
+  #categoryInner {
+    flex-wrap: wrap !important;
+    justify-content: space-evenly !important;
+  }
+  #categoryInner img {
+    width: auto !important;
+  }
+}

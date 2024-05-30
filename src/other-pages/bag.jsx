@@ -9,6 +9,7 @@ import { MdOutlineLocalOffer } from "react-icons/md";
 import BagAlert from "./bagAlert";
 
 const Bag = () => {
+
   useEffect(() => {
     document.title = "Shpping Bag";
   }, []);
@@ -17,7 +18,6 @@ const Bag = () => {
 
   return (
     <>
-      <Outlet></Outlet>
       {bagItems.length === 0 ? (
         <BagAlert />
       ) : (

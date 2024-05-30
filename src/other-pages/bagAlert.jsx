@@ -4,7 +4,7 @@ const BagAlert = () => {
   return (
     <>
       <div
-        className="container-fluid d-flex justify-content-center alig-items-center py-4"
+        className="container-fluid d-flex justify-content-center alig-items-center py-3"
         style={{ height: "40vh" }}
       >
         <div className="text-center">

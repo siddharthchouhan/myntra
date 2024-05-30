@@ -494,18 +494,18 @@ const MyntraStoreProvider = ({ children }) => {
 
   // ********* Local storage ***************
 
-  const getLocalBagData = () => {
-    let localData = localStorage.getItem("BAG_VALUE");
-    if (localData == []) {
-      return [];
-    } else {
-      return JSON.parse(localData);
-    }
-  };
+  // const getLocalBagData = () => {
+  //   let localData = localStorage.getItem("BAG_VALUE");
+  //   if (localData == []) {
+  //     return [];
+  //   } else {
+  //     return JSON.parse(localData);
+  //   }
+  // };
 
   // ******** Add to Bag Reducer ***********
 
-  const INITIAL_BAG_ITEMS = getLocalBagData();
+  const INITIAL_BAG_ITEMS = [];
 
   const [bagItems, dispatchBagItems] = useReducer(
     bagItemReducer,
@@ -521,9 +521,9 @@ const MyntraStoreProvider = ({ children }) => {
 
   // ************ Set items to local storage **************
 
-  useEffect(() => {
-    localStorage.setItem("BAG_VALUE", JSON.stringify(bagItems));
-  }, [bagItems]);
+  // useEffect(() => {
+  //   localStorage.setItem("BAG_VALUE", JSON.stringify(bagItems));
+  // }, [bagItems]);
 
   return (
     <storeDataContext.Provider

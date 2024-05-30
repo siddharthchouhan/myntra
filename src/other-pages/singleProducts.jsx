@@ -77,11 +77,11 @@ const SingleProducts = () => {
                     <span className="fw-bold pe-2">Color:</span> {detail.color}
                   </p>
                   <p className="text-dark fs-6">
-                    <span className="fw-bold pe-2">Warranty:</span>{" "}
+                    <span className="fw-bold pe-2">Warranty:</span>
                     {detail.warranty}
                   </p>
                   <p className="text-dark fs-6">
-                    <span className="fw-bold pe-2">Material:</span>{" "}
+                    <span className="fw-bold pe-2">Material:</span>
                     {detail.material}
                   </p>
                 </div>

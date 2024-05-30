@@ -2,8 +2,12 @@ import { Outlet } from "react-router-dom";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import MyntraStoreProvider from "./store/data-store";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    document.title = "Online shopping for Women, Men, Kids";
+  })
   return (
     <MyntraStoreProvider>
       <div

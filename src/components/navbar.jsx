@@ -112,7 +112,7 @@ const Navbar = () => {
                           <CiUser className="fs-3 fw-bold" />
                           <span>Logout</span>
                         </a>
-                      </li>{" "}
+                      </li>
                     </>
                   ) : (
                     <li>

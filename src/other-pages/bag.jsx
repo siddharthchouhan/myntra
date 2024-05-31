@@ -16,7 +16,16 @@ const Bag = () => {
         <EmptyBag />
       ) : (
         <>
-          <button onClick={() => loginWithRedirect()}>Login</button>
+          <div
+            className="container-fluid d-flex justify-content-center alig-items-center py-3"
+            style={{ height: "40vh" }}
+          >
+            <div className="d-flex justify-content-center gap-1 align-items-center flex-column">
+              <h1 className="fw-bold text-center" style={{color: "#ee5f73"}}>Login to check Bag Items!</h1>
+              <p className="text-secondary m-0 pb-2"><small>click the button below to login</small></p>
+              <button className="btn btn-danger" onClick={() => loginWithRedirect()}>Login</button>
+            </div>
+          </div>
         </>
       )}
 

@@ -176,7 +176,7 @@ const Bag = () => {
                     <small className="d-flex justify-content-between">
                       <span>Total MRP</span>{" "}
                       <span>
-                        RS.{" "}
+                        RS.
                         {bagItems.reduce((amount, value) => {
                           return amount + Number(value.prize);
                         }, 0)}

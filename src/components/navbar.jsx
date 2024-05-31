@@ -4,9 +4,11 @@ import { CiHeart, CiSearch, CiUser } from "react-icons/ci";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { storeDataContext } from "../store/data-store";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const { bagItems, navData } = useContext(storeDataContext);
+  const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
   return (
     <>
       <nav
@@ -33,12 +35,17 @@ const Navbar = () => {
             className="collapse navbar-collapse h-100"
             id="navbarSupportedContent"
           >
-            <ul className="navbar-nav me-auto mb-lg-0 gap-4 text-black fs-6 ms-5" id="navUl">
-              {navData.map(navItems => <li className="nav-item py-4">
-                <Link className="nav-link fw-bold" to="/Men-Shopping">
-                  {navItems}
-                </Link>
-              </li>)}
+            <ul
+              className="navbar-nav me-auto mb-lg-0 gap-4 text-black fs-6 ms-5"
+              id="navUl"
+            >
+              {navData.map((navItems) => (
+                <li className="nav-item py-4">
+                  <Link className="nav-link fw-bold" to="/Men-Shopping">
+                    {navItems}
+                  </Link>
+                </li>
+              ))}
             </ul>
             <form className="d-flex" style={{ width: "40%" }} role="search">
               <div
@@ -61,14 +68,66 @@ const Navbar = () => {
                 />
               </div>
             </form>
-            <div className="d-flex gap-4 flex-wrap justify-content-start" id="navRight">
-              <a
-                href="/"
-                className="nav-link fw-bold d-flex flex-column align-items-center"
-              >
-                <CiUser className="fs-3 fw-bold" />
-                <span>Profile</span>
-              </a>
+            <div
+              className="d-flex gap-4 flex-wrap justify-content-start"
+              id="navRight"
+            >
+              <div className="dropdown">
+                <li
+                  className="nav-item fw-bold d-flex flex-column align-items-center"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <CiUser className="fs-3 fw-bold" />
+                  User
+                </li>
+                <ul
+                  className="dropdown-menu p-3 ms-0"
+                  id="userInfo"
+                  aria-labelledby="dropdownMenuButton1"
+                >
+                  {isAuthenticated ? (
+                    <>
+                      <p
+                        className="fw-bold d-flex flex-column align-items-center"
+                        style={{ color: "#ee5f73" }}
+                      >
+                        <span>Welcome!</span>
+                        {user.name}
+                      </p>
+                      <li>
+                        <a
+                          href="/"
+                          className="nav-link fw-bold d-flex flex-column align-items-center"
+                          onClick={() =>
+                            logout({
+                              logoutParams: {
+                                returnTo: window.location.origin,
+                              },
+                            })
+                          }
+                        >
+                          <CiUser className="fs-3 fw-bold" />
+                          <span>Logout</span>
+                        </a>
+                      </li>{" "}
+                    </>
+                  ) : (
+                    <li>
+                      <a
+                        href="/"
+                        className="nav-link fw-bold d-flex flex-column align-items-center"
+                        onClick={() => loginWithRedirect()}
+                      >
+                        <CiUser className="fs-3 fw-bold" />
+                        <span>Login</span>
+                      </a>
+                    </li>
+                  )}
+                </ul>
+              </div>
               <a
                 href="/"
                 className="nav-link fw-bold d-flex flex-column align-items-center"

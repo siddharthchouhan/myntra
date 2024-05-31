@@ -55,6 +55,14 @@ nav ul li:hover {
   border: 1px solid gray !important;
 }
 
+#userInfo{
+  margin-left: -210% !important;
+}
+
+#userInfo li:hover{
+  border-bottom: 4px solid white !important;
+}
+
 @media only screen and (max-width: 1398px) {
   #navbar {
     padding: 1% 0% !important;

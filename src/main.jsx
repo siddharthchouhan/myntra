@@ -10,6 +10,7 @@ import SingleProducts from "./other-pages/singleProducts.jsx";
 import BagAddress from "./other-pages/bagAddress.jsx";
 import BagPayment from "./other-pages/bagPayment.jsx";
 import OrderPlaced from "./other-pages/orderSuccess.jsx";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,13 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  <Auth0Provider
+    domain="myntra-sidd.us.auth0.com"
+    clientId="KxanJjdih5leQaqLdqr3F3LxQjJ89jJ9"
+    authorizationParams={{
+      redirect_uri: window.location.origin,
+    }}
+  >
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </Auth0Provider>
 );

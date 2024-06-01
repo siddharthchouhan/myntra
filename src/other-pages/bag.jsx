@@ -23,7 +23,7 @@ const Bag = () => {
             <div className="d-flex justify-content-center gap-1 align-items-center flex-column">
               <h1 className="fw-bold text-center" style={{color: "#ee5f73"}}>Login to check Bag Items!</h1>
               <p className="text-secondary m-0 pb-2"><small>click the button below to login</small></p>
-              <button className="btn btn-danger" onClick={() => loginWithRedirect({auto_login: false, loginAfterSignup: false})}>Login</button>
+              <button className="btn btn-danger" onClick={() => loginWithRedirect({auto_login: false, loginAfterSignup: true})}>Login</button>
             </div>
           </div>
         </>

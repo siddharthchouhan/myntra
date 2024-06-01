@@ -119,7 +119,7 @@ const Navbar = () => {
                       <a
                         href="/"
                         className="nav-link fw-bold d-flex flex-column align-items-center"
-                        onClick={() => loginWithRedirect({auto_login: false, loginAfterSignup: false})}
+                        onClick={() => loginWithRedirect({auto_login: false, loginAfterSignup: true})}
                       >
                         <CiUser className="fs-3 fw-bold" />
                         <span>Login</span>

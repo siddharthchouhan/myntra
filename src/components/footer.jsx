@@ -22,10 +22,10 @@ const Footer = () => {
                 <ul className="nav flex-column">
                   {navData.map(footerItems => <li className="nav-item mb-2 ">
                     <Link
-                      to="/Men-Shopping"
+                      to={footerItems.to}
                       className="nav-link p-0 text-body-secondary text-lowercase"
                     >
-                      {footerItems}
+                      {footerItems.name}
                     </Link>
                   </li>)}
                 </ul>

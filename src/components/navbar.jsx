@@ -39,13 +39,11 @@ const Navbar = () => {
               className="navbar-nav me-auto mb-lg-0 gap-4 text-black fs-6 ms-5"
               id="navUl"
             >
-              {navData.map((navItems) => (
-                <li className="nav-item py-4">
-                  <Link className="nav-link fw-bold" to="/Men-Shopping">
-                    {navItems}
+              {navData.map(navItems => <li className="nav-item py-4">
+                  <Link className="nav-link fw-bold" to={navItems.to}>
+                    {navItems.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
             <form className="d-flex" style={{ width: "40%" }} role="search">
               <div
@@ -119,7 +117,12 @@ const Navbar = () => {
                       <a
                         href="/"
                         className="nav-link fw-bold d-flex flex-column align-items-center"
-                        onClick={() => loginWithRedirect({auto_login: false, loginAfterSignup: true})}
+                        onClick={() =>
+                          loginWithRedirect({
+                            auto_login: false,
+                            loginAfterSignup: true,
+                          })
+                        }
                       >
                         <CiUser className="fs-3 fw-bold" />
                         <span>Login</span>

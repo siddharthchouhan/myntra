@@ -7,10 +7,12 @@ export const storeDataContext = createContext({
   menCards: [],
   addToBag: () => {},
   productsData: [],
+  WomenproductsData: [],
 });
 
 const MyntraStoreProvider = ({ children }) => {
-  // *********** Product Data ************
+  // *********** MEN Product Data ************
+
   const productsData = [
     {
       key: "01",
@@ -374,9 +376,399 @@ const MyntraStoreProvider = ({ children }) => {
     },
   ];
 
+  // *********** WOMEN Product Data ************
+
+  const WomenproductsData = [
+    {
+      key: "001",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/25260156/2023/9/29/3d04b8b4-1104-4801-bed4-17ebf98223301695968509595KALINIWomenPinkEthnicMotifsYokeDesignRegularGottaPattiKurtaw1.jpg",
+      brand: "KALINI",
+      body: "Kurta With Tousers and Dupatta",
+      prize: "737",
+      rating: "4.3",
+      peopleRated: "4K",
+      discount: "30%",
+      size: [5, 6, 7, 8, 9, 10],
+      productDetail: [
+        {
+          color: "Pink",
+          warranty: "1 year",
+          material: "Cotton",
+        },
+      ],
+    },
+    {
+      key: "002",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/23158876/2023/10/4/ba6838bf-93c1-47d0-8948-790b3727f5711696415342531-anayna--Anarkali-Pure-Cotton-Kurta-With-Trousers--Dupatta-45-12.jpg",
+      brand: "Ananya",
+      body: "Anarkali Pure Cotton Kurta With Trousers & Dupatta",
+      prize: "1467",
+      rating: "5",
+      peopleRated: "4.1K",
+      discount: "40%",
+      size: [5, 6, 7, 8, 9, 10],
+      productDetail: [
+        {
+          color: "Pink",
+          warranty: "1.5 year",
+          material: "cotton",
+        },
+      ],
+    },
+    {
+      key: "003",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/26546814/2023/12/20/b9fca135-3e56-492d-ac88-d1ab137f5d691703059441739KALINIWomenPinkRegularKurtawithTrousersWithDupatta1.jpg",
+      brand: "KALINI",
+      body: "Regular Kurta with Trousers & With Dupatta",
+      prize: "760",
+      rating: "2.5",
+      peopleRated: "2K",
+      discount: "20%",
+      size: [5, 6, 7, 8, 9, 10],
+      productDetail: [
+        {
+          color: "Pink",
+          warranty: "2 year",
+          material: "cotton",
+        },
+      ],
+    },
+    {
+      key: "004",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20695836/2022/11/10/ba1724c2-c606-481c-a0ca-63424b61a8661668078028270WomensRayonPrintedEmbroideredKurtaWithPantAndDupatta1.jpg",
+      brand: "SINGNI",
+      body: "Women Purple Ethnic Motifs Embroidered Mirror Work Kurta with Trousers & Dupatta",
+      prize: "839",
+      rating: "4.5",
+      peopleRated: "5.2K",
+      discount: "40%",
+      size: [5, 6, 7, 8, 9, 10],
+      productDetail: [
+        {
+          color: "Dark Blue",
+          warranty: "3 year",
+          material: "leather",
+        },
+      ],
+    },
+    {
+      key: "005",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/25234310/2023/9/26/d6241239-dca6-4347-b0e9-f8b57181d25d1695713495036KurtaSets1.jpg",
+      brand: "KALINI",
+      body: "Floral Printed Anarkali Pure Cotton Kurta with Trousers & With Dupatta",
+      prize: "1297",
+      rating: "4.8",
+      peopleRated: "4.5K",
+      discount: "50%",
+      size: [5, 6, 7, 8, 9, 10],
+      productDetail: [
+        {
+          color: "black & White",
+          warranty: "2 year",
+          material: "leather",
+        },
+      ],
+    },
+    {
+      key: "006",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/28010226/2024/3/4/e5ca37b0-8307-4ef1-b904-8175620893db1709546334858KALINIWomenBeigePrintedStraightKurtawithTrousers1.jpg",
+      brand: "KALINI",
+      body: "Floral Printed V-Neck A-Line Kurta with Trouser",
+      prize: "766",
+      rating: "4.9",
+      peopleRated: "4.5K",
+      discount: "20%",
+      size: ["S", "M", "L", "XL", "XXL"],
+      productDetail: [
+        {
+          color: "black",
+          warranty: "1 year",
+          material: "Cotton",
+        },
+      ],
+    },
+    {
+      key: "007",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/25405732/2023/10/9/286fd863-0275-4bac-ae1d-1f129edbc00a1696825687422KALINIWomenVioletEmbroideredStraightKurtawithTrouserDupatta1.jpg",
+      brand: "KALINI",
+      body: "Floral Embroidered Regular Kurta With Trousers & Dupatta",
+      prize: "737",
+      rating: "4.9",
+      peopleRated: "4.5K",
+      discount: "20%",
+      size: ["S", "M", "L", "XL", "XXL"],
+      productDetail: [
+        {
+          color: "Mehroon",
+          warranty: "1 year",
+          material: "Cotton",
+        },
+      ],
+    },
+    {
+      key: "008",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/26975612/2024/1/14/2ce65770-686e-4041-b533-44dab683800a1705241974914ANOUKCottonYellowKurtawithPatialaandDupatta6.jpg",
+      brand: "Anouk",
+      body: "Floral Yoke Design Pure Cotton Straight Kurta With Patiala & Dupatta",
+      prize: "1379",
+      rating: "4.5",
+      peopleRated: "6.1K",
+      discount: "30%",
+      size: ["S", "M", "L", "XL", "XXL"],
+      productDetail: [
+        {
+          color: "White",
+          warranty: "1 year",
+          material: "Cotton",
+        },
+      ],
+    },
+    {
+      key: "009",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/25260136/2023/9/29/584e3bfb-0f4f-408f-89b1-4b5a04b710c51695970415815KALINIWomenBlueEthnicMotifsYokeDesignRegularKurtawithTrouser1.jpg",
+      brand: "KALINI",
+      body: "Shibori Dyed Regular Kurta with Trousers & Dupatta",
+      prize: "737",
+      rating: "5",
+      peopleRated: "5.1K",
+      discount: "30%",
+      size: ["S", "M", "L", "XL", "XXL"],
+      productDetail: [
+        {
+          color: "Gray",
+          warranty: "2 year",
+          material: "Cotton",
+        },
+      ],
+    },
+    {
+      key: "0010",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/21334304/2023/10/4/10d96212-4d28-447f-8ab7-cd15b91e503f1696406650695-anayna-Red-Floral-Ethnic-A-Line-Cotton-Midi-Ethnic-Dress-764-6.jpg",
+      brand: "Ananya",
+      body: "Red Floral Ethnic A-Line Cotton Midi Ethnic Dress",
+      prize: "809",
+      rating: "4.6",
+      peopleRated: "5.8K",
+      discount: "10%",
+      size: ["S", "M", "L", "XL", "XXL"],
+      productDetail: [
+        {
+          color: "Blue",
+          warranty: "2 year",
+          material: "Cotton",
+        },
+      ],
+    },
+    {
+      key: "0011",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/24210976/2023/7/26/8b2f3a33-c01c-4d11-b9ee-20836111dd2b1690376720692RENEESeeMeShineLipGloss-StarOfFrost25ml1.jpg",
+      brand: "Renee",
+      body: "See Me Shine Transparent Lip Gloss - 2.5ml - Star Of Frost",
+      prize: "301",
+      rating: "4.2",
+      peopleRated: "268",
+      discount: "10%",
+      size: ["none"],
+      productDetail: [
+        {
+          color: "Black",
+          warranty: "1 year",
+          material: "Polyester",
+        },
+      ],
+    },
+    {
+      key: "0012",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/14270222/2022/8/10/d32d2880-4f42-400f-8204-95567954c3e81660129096237ReneeSeeMeShineLipGloss-PinkPowWow25ml1.jpg",
+      brand: "Renee",
+      body: "See Me Shine Lip Gloss - Pink Pow Wow 2.5ml",
+      prize: "301",
+      rating: "4.7",
+      peopleRated: "517",
+      discount: "49%",
+      size: ["none"],
+      productDetail: [
+        {
+          color: "Blue & Yellow",
+          warranty: "2 year",
+          material: "Wipe with dry cloth",
+        },
+      ],
+    },
+    {
+      key: "0013",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/23790978/2023/6/28/143f10c9-4269-406a-938f-d030216c5db61687947375793RENEEHotLipsClearLipGloss45ml1.jpg",
+      brand: "Renee",
+      body: "Hot Lips Clear Lip Gloss with Vitamin E - 4.5ml",
+      prize: "197",
+      rating: "4.5",
+      peopleRated: "13",
+      discount: "40%",
+      size: ["3.5ml"],
+      productDetail: [
+        {
+          color: "Black",
+          warranty: "2 year",
+          material: "Cotton",
+        },
+      ],
+    },
+    {
+      key: "0014",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2230635/2024/5/21/9281d758-42ab-4945-91bf-b92e868f18611716273425280-Maybelline-New-York-Super-Stay-Matte-Ink-Liquid-Lipstick-5-m-1.jpg",
+      brand: "Maybelline",
+      body: "New York Super Stay Matte Ink Liquid Lipstick 5 ml - Lover 15",
+      prize: "469",
+      rating: "4",
+      peopleRated: "6",
+      discount: "30%",
+      size: ["4-5 ML"],
+      productDetail: [
+        {
+          color: "Navy Blue",
+          warranty: "2 year",
+          material: "100% Cotton",
+        },
+      ],
+    },
+    {
+      key: "0015",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20292946/2023/9/12/3943353a-d3ba-4e44-83e3-23f7ba4858611694508982102-LOreal-Paris-Infallible-24H-Fresh-Wear-Waterproof-Powder-Fou-1.jpg",
+      brand: "LOreal",
+      body: "Paris Infallible 24H Fresh Wear Waterproof Powder Foundation 9g- Golden Beige 140",
+      prize: "1044",
+      rating: "4",
+      peopleRated: "5.4K",
+      discount: "40%",
+      size: ["One Size"],
+      productDetail: [
+        {
+          color: "Navy blue tartan checks opaque Casual shirt",
+          warranty: "2 year",
+          material: "100% Cotton",
+        },
+      ],
+    },
+    {
+      key: "0016",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/55118/2024/2/13/d2d11015-f080-4096-85d5-6a4df63bfab61707819921677-Lakme-Absolute-Mattreal-Skin-Natural-Mousse-with-SPF-8---Ivo-1.jpg",
+      brand: "Lakme",
+      body: "Xtraordin-airy Mattereal Mousse Foundation, Matte Finish - 01 Classic Ivory, 25g",
+      prize: "719",
+      rating: "4",
+      peopleRated: "5.4K",
+      discount: "40%",
+      size: ["20-25 ML"],
+      productDetail: [
+        {
+          color: "Navy blue tartan checks opaque Casual shirt",
+          warranty: "2 year",
+          material: "100% Cotton",
+        },
+      ],
+    },
+    {
+      key: "0017",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/14940628/2023/3/23/6295f533-1e25-407e-a401-9d41070db0a91679562101565-Maybelline-Sensational-Liquid-Matte-Lipstick---21-Nude-Nuanc-1.jpg",
+      brand: "Maybelline",
+      body: "New York Sensational Liquid Matte Lipstick - 21 Nude Nuance - 7ml",
+      prize: "244",
+      rating: "4",
+      peopleRated: "5.4K",
+      discount: "40%",
+      size: ["6-8 ML"],
+      productDetail: [
+        {
+          color: "Navy blue tartan checks opaque Casual shirt",
+          warranty: "2 year",
+          material: "100% Cotton",
+        },
+      ],
+    },
+    {
+      key: "0018",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/22212908/2023/3/6/6e7727d9-d722-431a-b80e-ab77069660c81678084958451BlueHeavenSetOf4MinisButMightyHyperstayLiquidLipsticks6ml-Ma1.jpg",
+      brand: "Blue Heaven",
+      body: "Set Of 10 Matte Love Long Lasting Hydrating Mini Lipsticks - 1.3g Each",
+      prize: "299",
+      rating: "4",
+      peopleRated: "5.4K",
+      discount: "40%",
+      size: ["10-15 ML"],
+      productDetail: [
+        {
+          color: "Navy blue tartan checks opaque Casual shirt",
+          warranty: "2 year",
+          material: "100% Cotton",
+        },
+      ],
+    },
+    {
+      key: "0019",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/13105508/2024/2/13/e9fe640a-d75e-41ab-a3c3-f37f11c3a4ca1707820058429-Lakme-Eyeconic-Liquid-Eyeliner-45-ml---Black-808170782005802-1.jpg",
+      brand: "Lakme",
+      body: "9 to 5 Eyeconic Liquid Eyeliner Smudgeproof, Waterproof - Black, 4.5 ml",
+      prize: "234",
+      rating: "4",
+      peopleRated: "5.4K",
+      discount: "40%",
+      size: ["3-5 ML"],
+      productDetail: [
+        {
+          color: "Navy blue tartan checks opaque Casual shirt",
+          warranty: "2 year",
+          material: "100% Cotton",
+        },
+      ],
+    },
+    {
+      key: "0020",
+      img: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/6610914/2024/5/2/67d3ccdf-a887-4978-af45-c7cdea19a65f1714651251032GarnierMicellarWater-GentleCleanserForSensitiveSkinGet100Cle1.jpg",
+      brand: "Garnier",
+      body: "Micellar Water-Gentle Cleanser For Sensitive Skin, Get 100% Clean Skin-125ml",
+      prize: "169",
+      rating: "2.4",
+      peopleRated: "5.4K",
+      discount: "40%",
+      size: ["120-140 ML"],
+      productDetail: [
+        {
+          color: "Navy blue tartan checks opaque Casual shirt",
+          warranty: "2 year",
+          material: "100% Cotton",
+        },
+      ],
+    },
+  ];
+
   // ************** NAV Data ***************
 
-  const navData = ["MEN", "WOMEN", "KIDS", "HOME & LIVING", "BEAUTY", "STUDIO"];
+  const navData = [
+    {
+      name: "MEN",
+      to: "/Men-Shopping",
+    },
+    {
+      name: "WOMEN",
+      to: "/Women-Shopping",
+    },
+    {
+      name: "KIDS",
+      to: "/Kids-Shopping",
+    },
+    {
+      name: "HOME & LIVING",
+      to: "/Men-Shopping",
+    },
+    {
+      name: "BEAUTY",
+      to: "/Men-Shopping",
+    },
+    {
+      name: "STUDIO",
+      to: "/Men-Shopping",
+    },
+  ];
 
   // ******* costumer policies footer data ***************
   const costumerPolicy = [
@@ -536,6 +928,7 @@ const MyntraStoreProvider = ({ children }) => {
         productsData,
         navData,
         costumerPolicy,
+        WomenproductsData,
       }}
     >
       {children}

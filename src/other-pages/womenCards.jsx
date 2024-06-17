@@ -2,12 +2,11 @@ import { useContext } from "react";
 import { storeDataContext } from "../store/data-store";
 import { Link } from "react-router-dom";
 
-const MenCards = () => {
-  const { getSingleProducts, productsData } = useContext(storeDataContext);
-
-  return (
+const WomenCards = () => {
+  const { getSingleProducts, WomenproductsData } = useContext(storeDataContext);
+  return (  
     <>
-      {productsData.map((menCardsItems) => (
+      {WomenproductsData.map((menCardsItems) => (
         <div
           key={menCardsItems.key}
           className="card border-0 text-decoration-none"
@@ -35,4 +34,4 @@ const MenCards = () => {
   );
 };
 
-export default MenCards;
+export default WomenCards;
